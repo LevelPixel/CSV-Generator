@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Extracted Data</title>
+  </head>
+  <body>
+    <h1>Extracted Data</h1>
+    <p>CSV file saved at: {{ csv_file_path }}</p>
+    <ul>
+      {% for filename, title, tags in data %}
+        <li>
+          <h2>{{ filename }}</h2>
+          <p><strong>Title:</strong> {{ title }}</p>
+          <p><strong>Keywords:</strong> {{ tags }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Back</a>
+  </body>
+</html>
